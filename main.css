@@ -1,0 +1,19 @@
+#hero {
+  /* background-image: url("./images/familyxmas.jpg") */
+}
+
+.techImg {
+  max-width: 120px
+}
+
+.projImg {
+  max-width: 500px
+}
+
+#resumeThumb {
+  max-width: 150px;
+}
+
+.contactImg {
+  max-width: 80px
+}
