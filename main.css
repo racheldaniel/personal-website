@@ -3,7 +3,7 @@
   background-color: #1B512D
 }
 
-#navbar {
+.hero-head {
   position: fixed;
   background-color: #1B512D;
   width: 100%;
@@ -15,15 +15,29 @@
 }
 
 .projImg {
-  max-width: 500px
+  max-width: 500px;
+
+  -webkit-filter: brightness(100%);
 }
+
+.projImg:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(60%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 
 #resumeThumb {
   max-width: 150px;
 }
 
 .contactImg {
-  max-width: 80px
+  max-width: 80px;
+  margin: 0 20px
 }
 
 .section-header {
@@ -31,4 +45,12 @@
   padding: 5px;
   margin-top: 100px;
   margin-bottom: 50px
+}
+
+p {
+  margin-bottom: 25px
+}
+
+#giftStormSumm {
+  text-align: left
 }
