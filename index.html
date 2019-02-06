@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/mystyles.css">
   <link href="main.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <title>Rachel Daniel</title>
 </head>
 
 <body>
   <article>
-    <section class="hero is-primary is-large" id="hero">
+    <section class="hero is-primary is-large" id="home">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
@@ -30,22 +30,19 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
-                  Home
-                </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#about">
                   About
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#tech">
                   Tech
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#projects">
                   Projects
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#resume">
                   Resume
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#contact">
                   Contact
                 </a>
               </div>
@@ -57,99 +54,173 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">
+          <h1 class="title" id="hero-title">
             Hello, I'm Rachel
           </h1>
-          <h2 class="subtitle">
+          <h2 class="subtitle has-text-black" id="hero-subtitle">
             Full-Stack Web Developer in Nashville, TN
           </h2>
         </div>
       </div>
     </section>
     <section id="about">
+        <div class="container has-text-centered">
+            <h2 class="has-text-centered section-header">About Me</h2>
+            <div class="has-text-centered">
+                <img src="./images/headshot2.png" alt="Rachel Daniel" id="headshot">
+            </div>
+
+        </div>
       <div class="container">
-        <h2 class="has-text-centered">About Me</h2>
         <div id="profile">
           <p>
-            It started in the 6th grade, with the grid-based logic puzzles our homeroom teacher would hand out every
-            morning. I devoured every challenge, scouring the internet for puzzles I’d print for endless entertainment
-            on family road trips. As I grew and pursued various interests, dreams and goals, the undercurrent was
-            always the same -- a love of problem-solving and creating something tangible. I graduated from The
-            University of Mississippi with a BFA in Theater and a minor in Accounting, still searching for a career
-            path as challenging as it was rewarding.
+            I love solving puzzles. There is a joy in the balance of creativity and logic that has been an undercurrent in all of my academic and professional endeavors. Having graduated with a BFA in Theater and a minor in Accounting, I knew I wanted to find a career that was as challenging as it was rewarding.
           </p>
-          <p>
-            I was first introduced to the world of Software Development as a Systems Operations Analyst at Community
-            Health Systems, where I worked alongside Developers, gathering data about system use for our department.
-            When I stepped into the role of Systems Operations Manager-- the liaison between our department's tech
-            staff and our hundreds of application users-- I realized I loved being a part of the creation and
-            improvement of technology with the end user always in mind. More than anything I enjoyed diving into the
-            code to search for answers any time I was asked the classic question-- is this issue a bug, user error, or
-            intentional design upon which we can improve?
-          </p>
-          <p>
-            My interest in the world of Devs grew exponentially in my time with CHS, and it soon became clear that
-            Software Development was the rigorous, creative and exciting career for which I'd been searching. I knew I
-            had to go all in, and enrolled in Nashville Software School's Full-Time Web Developer Bootcamp.
-          </p>
-          <p>
-            I couldn't be more thrilled to be learning Full-Stack Development (Python/Django backend) with my bright
-            and supportive classmates of NSS' Cohort 28, and can't wait to see what comes next.
-          </p>
+          <p>So how does a Theater major find her way into software?</p>
         </div>
+        <div class="has-text-centered">
+          <a class="button is-primary" id="toggleButton">See More</a>
+        </div>
+
       </div>
     </section>
     <section id="tech">
       <div class="container has-text-centered">
-        <h2 class="has-text-centered">Tech</h2>
-        <img src="./images/tech/css3-plain-wordmark.svg" alt="CSS" class="techImg">
-        <img src="./images/tech/html5-plain-wordmark.svg " alt="HTML" class="techImg">
+        <h2 class="has-text-centered section-header">Tech</h2>
+        <img src="./images/tech/python-original.svg" alt="Python" class="techImg">
+        <img src="./images/tech/django-original.svg" alt="Django" class="techImg">
         <img src="./images/tech/javascript-original.svg" alt="JS" class="techImg">
         <img src="./images/tech/jquery-plain-wordmark.svg" alt="jQuery" class="techImg">
         <img src="./images/tech/react-original-wordmark.svg" alt="React" class="techImg">
+        <img src="./images/tech/SQL.png" alt="SQL" class="techImg">
+        <img src="./images/tech/css3-plain-wordmark.svg" alt="CSS" class="techImg">
+        <img src="./images/tech/html5-plain-wordmark.svg " alt="HTML" class="techImg">
         <img src="./images/tech/npm-original-wordmark.svg" alt="NPM" class="techImg">
         <img src="./images/tech/grunt-original-wordmark.svg" alt="Grunt" class="techImg">
         <img src="./images/tech/bootstrap-plain.svg" alt="Bootsrap" class="techImg">
-        <img src="./images/tech/bulma.png" alt="Bulma" class="techImg">
         <img src="./images/tech/Materialize-CSS-01.png" alt="Materialize" class="techImg">
         <img src="./images/tech/git-plain.svg" alt="Git" class="techImg">
         <img src="./images/tech/github-original.svg" alt="GitHub" class="techImg">
-        <img src="./images/tech/visualstudio-plain.svg" alt="VSC" class="techImg">
       </div>
     </section>
     <section id="projects">
-      <h2 class="has-text-centered">Projects</h2>
+      <h2 class="has-text-centered section-header">Projects</h2>
       <div class="columns has-text-centered">
         <div class="column">
-          <img src="./images/giftStormTemp.png" alt="GiftStorm" class="projImg">
+          <img src="./images/GiftStorm.gif" alt="GiftStorm" class="projImg" id="projImg1">
+          <h2 class="proj-head">GiftStorm: The Brainstorming App for Gift-Giving</h2>
+          <h3>NSS Front-End Capstone (React)</h3>
+        </div>
+        <div class="modal" id="projDesc1">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <h2 class="modal-card-title modal-header">GiftStorm</h2>
+              <button class="delete closeModal" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body" id="giftStormSumm">
+                <p>As someone with a large immediate family, birthdays, anniversaries and other celebrations seem to sneak up on me on a monthly basis, leaving me not only gift-less, but idea-less.</p>
+
+                <p>To put an end to last-minute holiday scrambling, I created GiftStorm -- a React App that allows users to track interests, gift ideas, purchases and upcoming holidays for all of their friends in one, easy-to-use interface.</p>
+
+                <p>Using a local JSON database, the app stores all user-specific data, allowing unique experiences depending on the logged-in user. The app features full CRUD functionality, so users can add, update and delete interests, ideas and purchases, as well as what holidays they are tracking,  allowing the user to brainstorm freely and spontaneously.</p>
+
+                <p>GiftStorm uses Moment.js to display the closest upcoming celebrations to the user along with the status of their gift purchasing for that occasion.</p>
+
+                <p>The app is simple and user-friendly, styled with ReactStrap and Bootstrap CSS frameworks.</p>
+
+                <a class="github-link" href="https://github.com/racheldaniel/Gift-Storm" target="_blank">VIEW THE CODE</a>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-success closeModal">Close</button>
+            </footer>
+          </div>
         </div>
         <div class="column">
-          <img src="./images/giftStormTemp.png" alt="GiftStorm" class="projImg">
+          <img src="./images/comingSoon.png" alt="Coming Soon" class="projImg">
+          <h3>NSS Back-End Capstone (Python)</h3>
         </div>
       </div>
-    </section>
-    <section id="resume">
-      <h2 class="has-text-centered">Resume</h2>
-      <div class="is-flex">
-        <a>
-          <img src="./images/resumeThumb.png" alt="Resume" id="resumeThumb">
-        </a>
-        <p>
-          Resume Summary goes here
-        </p>
+      <div class="columns has-text-centered">
+            <div class="column">
+              <img src="./images/Waddle.gif" alt="Waddle" class="projImg" id="projImg2">
+              <h2 class="proj-head">Waddle 2.0</h2>
+              <h3>NSS Front-End Group Project (React)</h3>
+            </div>
+            <div class="modal" id="projDesc2">
+              <div class="modal-background"></div>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <h2 class="modal-card-title modal-header">Waddle</h2>
+                  <button class="delete closeModal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body" id="waddleSumm">
+                    <p>Waddle is the premier social media app for literate Penguins-- based on a mock client request for an application that would allow users to post news articles, todo lists, upcoming events, and chat messages -- and see what their "friends" on the app had also posted.</p>
+
+                    <p>In version 1, our team utilized Grunt, ESLint and Browserify to lint, unify and compile our code-- which was modularized and written in vanilla JavaScript. We styled our first version using Materialize.</p>
+
+                    <p>In version 2, we refactored our code into React components with JSX. We styled using Bootstrap as well as Reactstrap elements.</p>
+
+                    <p>In both versions we stored data in a JSON file and used the MomentJS NPM</p>
+
+                    <p>My primary responsibilities for both versions of this project include the Events page and all related components as well as the API module containing base functions for API calls. Additionally, I assisted with the Friends component of the React version,  as well as the overall styling and structure of both versions.</p>
+                    <a class="github-link" href="https://github.com/penguin-sweater/react-nutshell" target="_blank">VIEW THE CODE</a>
+                </section>
+                <footer class="modal-card-foot">
+                  <button class="button is-success closeModal">Close</button>
+                </footer>
+              </div>
+            </div>
+            <div class="column">
+                <img src="./images/Bangazon.gif" alt="Bangazon" class="projImg" id="projImg3">
+                <h2 class="proj-head">Bangazon</h2>
+                <h3>NSS Back-End Group Project (Django)</h3>
+            </div>
+            <div class="modal" id="projDesc3">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                <header class="modal-card-head">
+                    <h2 class="modal-card-title modal-header">Bangazon</h2>
+                    <button class="delete closeModal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body" id="bangazonSumm">
+                    <p>Bangazon is a fictitious company created by NSS in desperate need of an app for managing employees and their assigned computers, departments,  and training programs.</p>
+
+                    <p>Our team was provided with a series of tickets, and was responsible for Sprint planning for the 5-day project-- estimating our velocity and assigning ourselves tickets for the first milestone.</p>
+
+                    <p>We utilitzed Django to interact with our SQL database-- created using Django models and populated with a customized seeder file. The application uses GET and POST ORMs for full CRUD functionality, and is minimally styled using Bootstrap.</p>
+
+                    <p>In addition to serving the role of Team Lead for this project-- facilitating initial planning and daily check-ins before formal stand-ups-- my primary responsibility during the project were the Employee views.</p>
+
+                    <p>The Employee views listed employees and their respective departments, allowed the user to add new employees, and afforded the option to edit employee data-- including their assigned computer and scheduled trainings. </p>
+                    <a class="github-link" href="https://github.com/raving-remoras/bangazon-workflow" target="_blank">VIEW THE CODE</a>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success closeModal">Close</button>
+                </footer>
+                </div>
+            </div>
+            </div>
+        </section>
+    <section class="has-text-centered" id="resume">
+      <h2 class="has-text-centered section-header">Resume</h2>
+      <div>
+        <a href="./images/Rachel Daniel-- Resume.pdf" target="_blank"><button class="button is-primary is-large resume-btn">View Resume</button></a>
+        <a href="./images/Rachel Daniel-- Resume.pdf" download><button class="button is-primary is-large resume-btn">Download Resume</button></a>
       </div>
     </section>
     <section id="contact">
-      <h2 class="has-text-centered">Contact</h2>
+      <h2 class="has-text-centered section-header">Contact</h2>
       <div class="has-text-centered">
-        <a><img src="./images/tech/github-original.svg" alt="GitHub" class="contactImg"></a>
-        <a><img src="./images/tech/linkedin-plain.svg" alt="LinkedIn" class="contactImg"></a>
-        <a><img src="./images/tech/email.png" alt="email" class="contactImg"></a>
+        <a href="https://github.com/racheldaniel/" target="_blank"><img src="./images/tech/github-original.svg" alt="GitHub" class="contactImg"></a>
+        <a href="https://www.linkedin.com/in/rachel-daniel-nashville/" target="_blank"><img src="./images/tech/linkedin-plain.svg" alt="LinkedIn" class="contactImg"></a>
+        <a href="mailto:rachdaniel88@gmail.com?" target="_top"><img src="./images/tech/email.png" alt="email" class="contactImg"></a>
       </div>
 
     </section>
   </article>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
