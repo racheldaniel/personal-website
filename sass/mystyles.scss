@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+$family-primary:Sarabun;
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+$primary: #3B493B;
+// $link: $green;
+// $info: $green;
+// $success: $green;
+$warning: #C86452;
+// $danger:$green;
+// $black: $green;
+// $dark: $green;
+$light: #D1C8C1;
+$white: #FFFBF4;
+
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass"
+

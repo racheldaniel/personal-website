@@ -1,5 +1,18 @@
+let burgerOpen = false
 
-//select nav elements, attach listener to smooth scroll to correct section when clicked on navbar
+//event listener on navbar burger for mobile
+$(".navbar-burger").click(function() {
+  if (burgerOpen === false){
+    $("#navbarMenuHeroA").addClass("is-active" )
+    burgerOpen = true
+  }else {
+    $("#navbarMenuHeroA").removeClass("is-active")
+    burgerOpen = false
+  }
+});
+
+
+//select nav elements, attach listener to smooth scroll to correct section when clicked on navbar. Also collapses burger nav if user is on mobile
 
 $(".navbar-end").find("a").click(function (e) {
   e.preventDefault();
@@ -7,6 +20,10 @@ $(".navbar-end").find("a").click(function (e) {
   $("html, body").animate({
     scrollTop: $($section).offset().top
   });
+  if (burgerOpen === true){
+    $("#navbarMenuHeroA").removeClass("is-active")
+    burgerOpen = false
+  }
 });
 
 
@@ -27,21 +44,28 @@ let status = "less"
 
 //function called with "See More/Less" button that appends the rest of the bio and resets based on whether user is requesting more or less
 const toggleText= () => {
-  let paragraphs = ["I was first introduced to the world of Software Development as a Systems Operations Analyst at Community Health Systems, where I worked alongside Developers, gathering data about system use for our department. When I stepped into the role of Systems Operations Manager-- the liaison between our department's tech staff and our hundreds of application users-- I realized I loved being a part of the creation and improvement of technology with the end user always in mind. More than anything I enjoyed diving into the code to search for answers any time I was asked the classic question-- is this issue a bug, user error, or intentional design upon which we can improve?", "My interest in the world of Devs grew exponentially in my time with CHS, and it soon became clear that Software Development was the rigorous, creative and exciting career for which I'd been searching. I knew I had to go all in, and enrolled in Nashville Software School's Full-Time Web Developer Bootcamp.", "I couldn't be more thrilled to be learning Full-Stack Development (Python/Django backend) with my bright and supportive classmates of NSS' Cohort 28, and can't wait to see what comes next."]
+  let shortParagraphs = ["I love solving puzzles. There is a joy in the balance of creativity and logic that has been an undercurrent in all of my academic and professional endeavors. Having graduated with a BFA in Theater and a minor in Accounting, I knew I wanted to find a career that was as challenging as it was rewarding.", "So how does a Theater major find her way into software?"]
+
+  let longParagraph = "In 2010, I joined Community Health Systems (CHS). There, as a Systems Operations Analyst, I had the opportunity to work closely with developers in gathering data about the system use for the department. After being promoted to Systems Operations Manager,  my increased involvement in the development process sparked a passion for code-- particularly for being a part of the creation and improvement of technology with an emphasis on the end user-- which culminated in leaving to attend Nashville Software School’s six month Python/ Django bootcamp. I am excited about this new journey as a software developer that brings with it the opportunity to problem-solve and learn something new each day."
+
 
   if (status === "less") {
-    paragraphs.forEach((paragraph) => {
-      let p = document.createElement("p")
-      p.innerHTML = paragraph
-      document.getElementById("profile").appendChild(p)
-    })
+    let p = document.createElement("p")
+    let img = document.getElementById("headshot")
+    p.innerHTML = longParagraph
+    document.getElementById("profile").appendChild(p)
+    img.setAttribute("src", "./images/prisonMike.png")
     document.getElementById("toggleButton").innerText = "See Less";
     status = "more";
   } else if (status === "more") {
+    let img = document.getElementById("headshot")
+    img.setAttribute("src", "./images/headshot2.png")
     document.getElementById("profile").innerHTML = ""
-    let p = document.createElement("p")
-    p.innerHTML = "It started in the 6th grade, with the grid-based logic puzzles our homeroom teacher would hand out every morning. I devoured every challenge, scouring the internet for puzzles I’d print for endless entertainment on family road trips. As I grew and pursued various interests, dreams and goals, the undercurrent was always the same -- a love of problem-solving and creating something tangible. I graduated from The University of Mississippi with a BFA in Theater and a minor in Accounting, still searching for a career path as challenging as it was rewarding."
-    document.getElementById("profile").appendChild(p)
+    shortParagraphs.forEach(paragraph => {
+        let p = document.createElement("p")
+        p.innerHTML = paragraph
+        document.getElementById("profile").appendChild(p)
+    })
     document.getElementById("toggleButton").innerText = "See More";
     status = "less"
   }
@@ -53,12 +77,43 @@ $("#toggleButton").click(function (e) {
   toggleText()
 });
 
-//event listener on giftStorm image-- brings up modal
+//event listener on giftStorm gif-- brings up modal
 $("#projImg1").click(function() {
   $("#projDesc1").addClass("is-active" )
 });
+
+//event listener on Waddle gif-- brings up modal
+$("#projImg2").click(function() {
+    $("#projDesc2").addClass("is-active" )
+  });
+
+//event listener on Bangazon gif-- brings up modal
+$("#projImg3").click(function() {
+    $("#projDesc3").addClass("is-active" )
+  });
 
 //event listener on close buttons on giftStorm modal
 $(".closeModal").click(function() {
   $("#projDesc1").removeClass("is-active" )
 });
+
+//event listener on close buttons on Waddle modal
+$(".closeModal").click(function() {
+    $("#projDesc2").removeClass("is-active" )
+  });
+
+//event listener on close buttons on Bangazon modal
+$(".closeModal").click(function() {
+    $("#projDesc3").removeClass("is-active" )
+  });
+
+//scroll listener to toggle navbar color
+$(function () {
+    $(document).scroll(function () {
+      let $nav = $(".hero-head");
+      let $hero = $(".hero-body");
+      let $subtitle = $("#hero-subtitle")
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $hero.height());
+      $subtitle.toggleClass('scrolled', $(this).scrollTop() >= $nav.height());
+    });
+  });

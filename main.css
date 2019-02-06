@@ -1,21 +1,73 @@
+
 #home {
   /* background-image: url("./images/light-bulb-231412_1920.jpg") */
-  background-color: #1B512D
+  background-color: #1B512D;
+  background-image: url("images/fire2.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
 }
 
 .hero-head {
   position: fixed;
-  background-color: #1B512D;
   width: 100%;
   z-index: 3
 }
 
+.hero-head.scrolled {
+    background-color: #1B512D !important;
+    transition: background-color 1400ms linear;
+  }
+
+
+#hero-title{
+    margin-top: 40px;
+    font-family: 'Bad Script', cursive;
+    font-size: 2.5em;
+}
+
+.section-header {
+    color: #1B512D;
+    padding: 5px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: 'Bad Script', cursive;
+    font-size: 2.5em;
+  }
+
+.modal-header {
+    color: #1B512D;
+    font-family: 'Bad Script', cursive;
+    font-size: 2.5em;
+}
+
+#hero-subtitle {
+    font-weight: bold;
+    font-family: 'Bad Script', cursive;
+    /* font-size: 1.25em */
+}
+
+#hero-subtitle.scrolled {
+    color: #FFFBF4 !important;
+    transition: color 600ms linear;
+    /* font-size: 1.25em */
+}
+
+/* #hero-body {
+    z-index: -3;
+} */
+
+.navbar-item:hover{
+    background-color:#C86452;
+}
+
 .techImg {
-  max-width: 120px
+  max-width: 120px;
+  margin: 10px
 }
 
 .projImg {
-  max-width: 500px;
+  max-width: 600px;
 
   -webkit-filter: brightness(100%);
 }
@@ -40,17 +92,39 @@
   margin: 0 20px
 }
 
-.section-header {
-  color: #1B512D;
-  padding: 5px;
-  margin-top: 100px;
-  margin-bottom: 50px
-}
+
 
 p {
   margin-bottom: 25px
 }
 
-#giftStormSumm {
+#headshot {
+    margin-bottom: 30px;
+    margin-top: -10px;
+    border: 2px solid #1B512D;
+    border-radius: 15%;
+}
+
+#giftStormSumm, #waddleSumm, #bangazonSumm {
   text-align: left
+}
+
+#navbarMenuHeroA {
+  color: white
+}
+
+.section-header:before, #hero-subtitle:before {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  margin-top: -7em;
+  height: 7em;
+}
+
+/* .modal-header:before {
+
+} */
+
+.resume-btn {
+    margin: 30px;
 }

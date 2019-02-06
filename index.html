@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <link rel="stylesheet" href="css/mystyles.css">
   <link href="main.css" rel="stylesheet" />
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <title>Rachel Daniel</title>
@@ -30,9 +30,6 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active" href="#home">
-                  Home
-                </a>
                 <a class="navbar-item" href="#about">
                   About
                 </a>
@@ -57,27 +54,29 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">
+          <h1 class="title" id="hero-title">
             Hello, I'm Rachel
           </h1>
-          <h2 class="subtitle">
+          <h2 class="subtitle has-text-black" id="hero-subtitle">
             Full-Stack Web Developer in Nashville, TN
           </h2>
         </div>
       </div>
     </section>
     <section id="about">
+        <div class="container has-text-centered">
+            <h2 class="has-text-centered section-header">About Me</h2>
+            <div class="has-text-centered">
+                <img src="./images/headshot2.png" alt="Rachel Daniel" id="headshot">
+            </div>
+
+        </div>
       <div class="container">
-        <h2 class="has-text-centered section-header">About Me</h2>
         <div id="profile">
           <p>
-            It started in the 6th grade, with the grid-based logic puzzles our homeroom teacher would hand out every
-            morning. I devoured every challenge, scouring the internet for puzzles I’d print for endless entertainment
-            on family road trips. As I grew and pursued various interests, dreams and goals, the undercurrent was
-            always the same -- a love of problem-solving and creating something tangible. I graduated from The
-            University of Mississippi with a BFA in Theater and a minor in Accounting, still searching for a career
-            path as challenging as it was rewarding.
+            I love solving puzzles. There is a joy in the balance of creativity and logic that has been an undercurrent in all of my academic and professional endeavors. Having graduated with a BFA in Theater and a minor in Accounting, I knew I wanted to find a career that was as challenging as it was rewarding.
           </p>
+          <p>So how does a Theater major find her way into software?</p>
         </div>
         <div class="has-text-centered">
           <a class="button is-primary" id="toggleButton">See More</a>
@@ -88,34 +87,35 @@
     <section id="tech">
       <div class="container has-text-centered">
         <h2 class="has-text-centered section-header">Tech</h2>
-        <img src="./images/tech/css3-plain-wordmark.svg" alt="CSS" class="techImg">
-        <img src="./images/tech/html5-plain-wordmark.svg " alt="HTML" class="techImg">
+        <img src="./images/tech/python-original.svg" alt="Python" class="techImg">
+        <img src="./images/tech/django-original.svg" alt="Django" class="techImg">
         <img src="./images/tech/javascript-original.svg" alt="JS" class="techImg">
         <img src="./images/tech/jquery-plain-wordmark.svg" alt="jQuery" class="techImg">
         <img src="./images/tech/react-original-wordmark.svg" alt="React" class="techImg">
+        <img src="./images/tech/SQL.png" alt="SQL" class="techImg">
+        <img src="./images/tech/css3-plain-wordmark.svg" alt="CSS" class="techImg">
+        <img src="./images/tech/html5-plain-wordmark.svg " alt="HTML" class="techImg">
         <img src="./images/tech/npm-original-wordmark.svg" alt="NPM" class="techImg">
         <img src="./images/tech/grunt-original-wordmark.svg" alt="Grunt" class="techImg">
         <img src="./images/tech/bootstrap-plain.svg" alt="Bootsrap" class="techImg">
-        <img src="./images/tech/bulma.png" alt="Bulma" class="techImg">
         <img src="./images/tech/Materialize-CSS-01.png" alt="Materialize" class="techImg">
         <img src="./images/tech/git-plain.svg" alt="Git" class="techImg">
         <img src="./images/tech/github-original.svg" alt="GitHub" class="techImg">
-        <img src="./images/tech/visualstudio-plain.svg" alt="VSC" class="techImg">
       </div>
     </section>
     <section id="projects">
       <h2 class="has-text-centered section-header">Projects</h2>
       <div class="columns has-text-centered">
         <div class="column">
-          <img src="./images/giftStormTemp.png" alt="GiftStorm" class="projImg" id="projImg1">
-          <h2>GiftStorm: The Brainstorming App for Gift-Giving</h2>
+          <img src="./images/GiftStorm.gif" alt="GiftStorm" class="projImg" id="projImg1">
+          <h2 class="proj-head">GiftStorm: The Brainstorming App for Gift-Giving</h2>
           <h3>NSS Front-End Capstone (React)</h3>
         </div>
         <div class="modal" id="projDesc1">
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
-              <p class="modal-card-title">GiftStorm</p>
+              <h2 class="modal-card-title modal-header">GiftStorm</h2>
               <button class="delete closeModal" aria-label="close"></button>
             </header>
             <section class="modal-card-body" id="giftStormSumm">
@@ -128,6 +128,8 @@
                 <p>GiftStorm uses Moment.js to display the closest upcoming celebrations to the user along with the status of their gift purchasing for that occasion.</p>
 
                 <p>The app is simple and user-friendly, styled with ReactStrap and Bootstrap CSS frameworks.</p>
+
+                <a class="github-link" href="https://github.com/racheldaniel/Gift-Storm" target="_blank">VIEW THE CODE</a>
             </section>
             <footer class="modal-card-foot">
               <button class="button is-success closeModal">Close</button>
@@ -139,16 +141,72 @@
           <h3>NSS Back-End Capstone (Python)</h3>
         </div>
       </div>
-    </section>
-    <section id="resume">
+      <div class="columns has-text-centered">
+            <div class="column">
+              <img src="./images/Waddle.gif" alt="Waddle" class="projImg" id="projImg2">
+              <h2 class="proj-head">Waddle 2.0</h2>
+              <h3>NSS Front-End Group Project (React)</h3>
+            </div>
+            <div class="modal" id="projDesc2">
+              <div class="modal-background"></div>
+              <div class="modal-card">
+                <header class="modal-card-head">
+                  <h2 class="modal-card-title modal-header">Waddle</h2>
+                  <button class="delete closeModal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body" id="waddleSumm">
+                    <p>Waddle is the premier social media app for literate Penguins-- based on a mock client request for an application that would allow users to post news articles, todo lists, upcoming events, and chat messages -- and see what their "friends" on the app had also posted.</p>
+
+                    <p>In version 1, our team utilized Grunt, ESLint and Browserify to lint, unify and compile our code-- which was modularized and written in vanilla JavaScript. We styled our first version using Materialize.</p>
+
+                    <p>In version 2, we refactored our code into React components with JSX. We styled using Bootstrap as well as Reactstrap elements.</p>
+
+                    <p>In both versions we stored data in a JSON file and used the MomentJS NPM</p>
+
+                    <p>My primary responsibilities for both versions of this project include the Events page and all related components as well as the API module containing base functions for API calls. Additionally, I assisted with the Friends component of the React version,  as well as the overall styling and structure of both versions.</p>
+                    <a class="github-link" href="https://github.com/penguin-sweater/react-nutshell" target="_blank">VIEW THE CODE</a>
+                </section>
+                <footer class="modal-card-foot">
+                  <button class="button is-success closeModal">Close</button>
+                </footer>
+              </div>
+            </div>
+            <div class="column">
+                <img src="./images/Bangazon.gif" alt="Bangazon" class="projImg" id="projImg3">
+                <h2 class="proj-head">Bangazon</h2>
+                <h3>NSS Back-End Group Project (Django)</h3>
+            </div>
+            <div class="modal" id="projDesc3">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                <header class="modal-card-head">
+                    <h2 class="modal-card-title modal-header">Bangazon</h2>
+                    <button class="delete closeModal" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body" id="bangazonSumm">
+                    <p>Bangazon is a fictitious company created by NSS in desperate need of an app for managing employees and their assigned computers, departments,  and training programs.</p>
+
+                    <p>Our team was provided with a series of tickets, and was responsible for Sprint planning for the 5-day project-- estimating our velocity and assigning ourselves tickets for the first milestone.</p>
+
+                    <p>We utilitzed Django to interact with our SQL database-- created using Django models and populated with a customized seeder file. The application uses GET and POST ORMs for full CRUD functionality, and is minimally styled using Bootstrap.</p>
+
+                    <p>In addition to serving the role of Team Lead for this project-- facilitating initial planning and daily check-ins before formal stand-ups-- my primary responsibility during the project were the Employee views.</p>
+
+                    <p>The Employee views listed employees and their respective departments, allowed the user to add new employees, and afforded the option to edit employee data-- including their assigned computer and scheduled trainings. </p>
+                    <a class="github-link" href="https://github.com/raving-remoras/bangazon-workflow" target="_blank">VIEW THE CODE</a>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success closeModal">Close</button>
+                </footer>
+                </div>
+            </div>
+            </div>
+        </section>
+    <section class="has-text-centered" id="resume">
       <h2 class="has-text-centered section-header">Resume</h2>
-      <div class="is-flex">
-        <a>
-          <img src="./images/resumeThumb.png" alt="Resume" id="resumeThumb">
-        </a>
-        <p>
-          Resume Summary goes here
-        </p>
+      <div>
+        <a href="./images/Rachel Daniel-- Resume.pdf" target="_blank"><button class="button is-primary is-large resume-btn">View Resume</button></a>
+        <a href="./images/Rachel Daniel-- Resume.pdf" download><button class="button is-primary is-large resume-btn">Download Resume</button></a>
       </div>
     </section>
     <section id="contact">
