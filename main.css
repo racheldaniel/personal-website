@@ -24,6 +24,7 @@
     margin-top: 40px;
     font-family: 'Bad Script', cursive;
     font-size: 2.5em;
+    margin-left: 50px
 }
 
 .section-header {
@@ -44,6 +45,7 @@
 #hero-subtitle {
     font-weight: bold;
     font-family: 'Bad Script', cursive;
+    margin-left: 50px
     /* font-size: 1.25em */
 }
 
