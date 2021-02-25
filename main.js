@@ -44,22 +44,22 @@ let status = "less"
 
 //function called with "See More/Less" button that appends the rest of the bio and resets based on whether user is requesting more or less
 const toggleText= () => {
-  let shortParagraphs = ["I love solving puzzles. There is a joy in the balance of creativity and logic that has been an undercurrent in all of my academic and professional endeavors. Having graduated with a BFA in Theater and a minor in Accounting, I knew I wanted to find a career that was as challenging as it was rewarding.", "So how does a Theater major find her way into software?"]
+  let shortParagraphs = ["Greg Daniel founded Daniel Literary Group in early 2007 after more than ten years in publishing, six of which were at the executive level at Thomas Nelson Publishers where he was Vice President and Associate Publisher for W Publishing Group, a trade book division of Thomas Nelson."]
 
-  let longParagraph = "In 2010, I joined Community Health Systems (CHS). There, as a Systems Operations Analyst, I had the opportunity to work closely with developers in gathering data about the system use for the department. After being promoted to Systems Operations Manager,  my increased involvement in the development process sparked a passion for code-- particularly for being a part of the creation and improvement of technology with an emphasis on the end user-- which culminated in leaving to attend Nashville Software School’s six month Python/ Django bootcamp. I am excited about this new journey as a software developer that brings with it the opportunity to problem-solve and learn something new each day."
+  let longParagraphs = ['Greg has had the honor of working with such critically acclaimed authors as Nadia Bolz-Weber, Sara Miles, Jon Sweeney, Scot McKnight, River Jordan, Matthew Paul Turner, and David Dark. Greg has also been involved with publishing books by a number of celebrity personalities, including Bono, George Foreman, and "Black Hawk Down" hero Cpt Jeff Struecker.', '            With his publishing background, Greg brings a keen editorial eye to the projects he represents. He teaches writing workshops at a handful of conferences each year. Greg also provides consulting services to authors who need help determining their best entryway into publishing in an ever-evolving market.']
 
 
   if (status === "less") {
-    let p = document.createElement("p")
-    let img = document.getElementById("headshot")
-    p.innerHTML = longParagraph
-    document.getElementById("profile").appendChild(p)
-    img.setAttribute("src", "./images/prisonMike.png")
+    // let p = document.createElement("p")
+    // p.innerHTML = longParagraph
+    longParagraphs.forEach(paragraph => {
+        let p = document.createElement("p")
+        p.innerHTML = paragraph
+        document.getElementById("profile").appendChild(p)
+    })
     document.getElementById("toggleButton").innerText = "See Less";
     status = "more";
   } else if (status === "more") {
-    let img = document.getElementById("headshot")
-    img.setAttribute("src", "./images/headshot2.png")
     document.getElementById("profile").innerHTML = ""
     shortParagraphs.forEach(paragraph => {
         let p = document.createElement("p")
